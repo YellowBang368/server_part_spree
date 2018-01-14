@@ -1,0 +1,13 @@
+.pagination a {
+  color: #555555!important;
+}
+
+.pagination .page a {
+  background: #ffffff;
+  border-color: #dddddd;
+}
+
+.pagination .page a:hover {
+  background: #dddddd;
+  border-color: #dddddd;
+}

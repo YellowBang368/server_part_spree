@@ -1,0 +1,43 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 600!important;
+  font-family: 'Open Sans SemiBold', sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+.footer {
+  color: #dbdbdb;
+}
+
+.footer .head-text {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.text-lead {
+  margin-top: 50px;
+  margin-bottom: auto;
+
+}
+
+.product-name {
+  color: #3d3d3d;
+  margin: 0 0.2em;
+  margin-top: 0.2em;
+  font-size: 1.15em!important;
+  line-height: 1.2em;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+  float: left;
+}

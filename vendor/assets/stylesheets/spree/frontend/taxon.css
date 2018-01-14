@@ -1,0 +1,87 @@
+.taxon-title {
+  font-size: 32px;
+  line-height: 1.4em;
+  font-weight: 500!important;
+  font-family: sans-serif;
+  color: #2b2b2b;
+}
+
+.taxon-sidebar {
+  float: left;
+  display: inline-block;
+  min-height: 500px;
+  height: 100%;
+}
+
+.taxon-sidebar br {
+  display: block;
+  height: 3px;
+  content: " ";
+}
+
+.taxon-sidebar .big-br {
+  display: block;
+  height: 10px!important;
+  content: " ";
+}
+
+.taxon-sidebar .small-br {
+  display: block;
+  height: 2px!important;
+  content: " ";
+}
+
+.taxon-sidebar ul {
+  display: block!important;
+  list-style: none;
+}
+
+.taxon-sidebar ul li  {
+}
+
+.taxon-sidebar a {
+  color: #2b2b2b;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.taxon-sidebar a:hover {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.taxon-sidebar .active a {
+  text-decoration: none;
+}
+
+
+.taxon-title {
+  margin-bottom: 5px;
+}
+
+.taxon-name-underline {
+  margin: 2px 0;
+  margin-bottom: 35px;
+  border: none;
+  color: #f96e5b;
+  background-color: #f96e5b;
+  height: 2px;
+}
+
+.taxon-list-group {
+  display: block!important;
+}
+
+.first_level_taxon {
+  font-size: 1.2em;
+}
+
+.second_level_taxon {
+  font-size: 1em;
+  margin-left: 5px;
+}
+
+.second-list-item-taxon a {
+  color: #555555;
+}

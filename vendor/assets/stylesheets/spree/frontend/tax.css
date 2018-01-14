@@ -1,0 +1,13 @@
+.taxonomies {
+
+}
+
+.list-group .active {
+  color: #ffffff;
+  background: #f96e5b!important;
+  border-color: #dddddd!important;
+}
+
+.list-group .active:hover {
+  border-color: #dddddd!important;
+}

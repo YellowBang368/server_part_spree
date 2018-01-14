@@ -1,0 +1,32 @@
+<h1 class="taxon-title"><%= @taxon.name %></h1>
+<hr class="taxon-name-underline">
+<% if params[:search].present? %>
+  <%= render partial: 'spree/shared/trackers/segment/product_list_filtered.js',
+              formats: :js,
+              locals: { search: params[:search], products: @products } %>
+<% end %>
+
+
+<% first_level_taxons = Spree::Taxon.where(parent_id: @taxon.id) %>
+<div class="col-md-3">
+  <div class="taxon-sidebar">
+    <ul>
+      <% first_level_taxons.each do |tax| %>
+        <li><%= link_to tax.name, tax.permalink, class: 'first_level_taxon' %></li>
+          <br>
+        <% second_level_taxons = Spree::Taxon.where(parent_id: tax.id) %>
+        <% second_level_taxons.each do |sec_tax| %>
+          <ul class="second-list-item-taxon">
+            <li><%= link_to sec_tax.name, sec_tax.permalink, class: 'second_level_taxon' %></li>
+            <br class="small-br">
+          </ul>
+        <% end %>
+          <br class="big-br">
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<div data-hook="taxon_products" class="taxon-products">
+  <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+</div>

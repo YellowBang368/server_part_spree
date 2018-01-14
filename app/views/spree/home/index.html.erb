@@ -1,0 +1,16 @@
+<% @body_id = 'home-page' %>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render partial: 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+
+<div data-hook="homepage_products">
+  <% cache(cache_key_for_products) do %>
+      <h4>Популярное</h4>
+    <%= render partial: 'spree/shared/products', locals: { products: @products.last(6).shuffle } %>
+      <h4>Праздничные скидки</h4>
+    <%= render partial: 'spree/shared/products', locals: { products: @products.last(6).shuffle } %>
+  <% end %>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="header">
+  <div id='cssmenu'>
+    <div>
+      <ul>
+        <li class='active'><%= link_to 'Товары', root_path %></li>
+        <li><a href='#'><span>О компании</span></a></li>
+      </ul>
+      <ul style="float: right">
+        <% if spree_current_user %>
+            <%= spree_current_user.email %>
+            <li><a href='#'><span>Корзина</span></a></li>
+            <li><%= link_to 'Выйти', destroy_spree_user_session_path %></li>
+        <% else %>
+            <li><%= link_to 'Войти', new_spree_user_session_path %></li>
+            <li><%= link_to 'зарегистрироваться', new_spree_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.shopping-cart-table {
+  text-align: center;
+}
+
+.shopping-cart-table form {
+  display: inline-block;
+  width: 800px;
+  min-height: 500px;
+}

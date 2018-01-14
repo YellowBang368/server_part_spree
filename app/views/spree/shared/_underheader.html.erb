@@ -1,0 +1,11 @@
+<div class="underheader">
+  <div class="wrapper">
+    <ul>
+      <% unless @taxonomies.nil? %>
+        <% @taxonomies.each do |taxonomy| %>
+          <li><%= link_to "#{Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name).gsub('Shop by', '')}", "/t/#{taxonomy.root.permalink}", class: "link" %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

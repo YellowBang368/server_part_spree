@@ -1,0 +1,21 @@
+<body style="background: #dddddd">
+
+<%= form_for Spree::User.new, as: :spree_user, url: spree.create_new_session_path do |f| %>
+    <div class="field">
+      <%= f.email_field :email, tabindex: 1, placeholder: Spree.t(:email), autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, tabindex: 2, placeholder: Spree.t(:password), autocomplete: "off" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Войти" %>
+    </div>
+
+    <div class="helpful-links">
+    </div>
+<% end %>
+
+
+</body>

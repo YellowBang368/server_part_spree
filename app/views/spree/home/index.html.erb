@@ -8,9 +8,11 @@
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
       <h4>Популярное</h4>
-    <%= render partial: 'spree/shared/products', locals: { products: @products.last(6).shuffle } %>
-      <h4>Праздничные скидки</h4>
-    <%= render partial: 'spree/shared/products', locals: { products: @products.last(6).shuffle } %>
+      <% unless @products.nil? %>
+        <%= render partial: 'spree/shared/products', locals: { products: @products.last(6).shuffle } %>
+        <h4>Праздничные скидки</h4>
+        <%= render partial: 'spree/shared/products', locals: { products: @products.last(6).shuffle } %>
+      <% end %>
   <% end %>
 </div>
 

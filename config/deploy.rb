@@ -5,6 +5,7 @@ set :application, "server-part"
 set :repo_url, "https://github.com/YellowBang368/server_part_spree"
 
 set :rbenv_path, "/home/deploy/.rbenv"
+set :linked_dirs, %w(tmp/pids tmp/sockets log)
 
 set :deploy_to, "/home/deploy/server-part"
 

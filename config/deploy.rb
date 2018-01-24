@@ -7,10 +7,15 @@ set :repo_url, "https://github.com/YellowBang368/server_part_spree"
 set :rbenv_path, "/home/deploy/.rbenv"
 set :linked_dirs, %w(tmp/pids tmp/sockets log)
 
-set :deploy_to, "/home/deploy/server-part"
+set :deploy_to, "/etc/deploy/server-part"
+
+set :puma_bind,       "unix://home/deploy/server-part/current/tmp/sockets/home/deploy/server-part/current/-puma.sock"
+set :puma_state,      "/home/deploy/server-part/current//tmp/pids/puma.state"
+set :puma_pid,        "/home/deploy/server-part/current//tmp/pids/puma.pid"
 
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
+
 
 
 

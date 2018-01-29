@@ -18,6 +18,7 @@ gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
 gem 'pg', '~> 0.18'
 
+
 gem 'capistrano3-puma' , group: :development
 
 group :development, :test do
